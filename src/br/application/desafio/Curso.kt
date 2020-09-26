@@ -6,7 +6,7 @@ class Curso(var nome: String, var codigoCurso: Int, var professorTitular: Profes
 
     override fun toString(): String {
 
-        var string = "Nome: $nome || Código: $codigoCurso || Professor Titular: $professorTitular || Professor Adjunto: $professorAdjunto \n Alunos da Turma: \n"
+        var string = "Curso: $nome || Código: $codigoCurso || Professor Titular: ${professorTitular.nome+" "+professorTitular.sobrenome}  || Professor Adjunto: ${professorAdjunto.nome+" "+professorAdjunto.sobrenome} \nAlunos da Turma: \n"
         alunos.forEach(){string += it.toString() + "\n"}
         return string
     }
