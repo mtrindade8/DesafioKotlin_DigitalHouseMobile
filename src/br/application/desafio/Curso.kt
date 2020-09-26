@@ -6,4 +6,6 @@ class Curso(var nome: String, var codigoCurso: Int) {
 
     override fun toString(): String { return "Nome: $nome || Código: $codigoCurso"  }
 
+    override fun hashCode(): Int { return codigoCurso }
+
 }
