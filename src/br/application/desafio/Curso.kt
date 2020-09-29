@@ -4,7 +4,7 @@ class Curso(var nome: String, var codigoCurso: Int, var qdtMaxAlunos: Int) {
 
     lateinit var professorTitular: ProfessorTitular
     lateinit var professorAdjunto: ProfessorAdjunto
-    lateinit var alunos: MutableMap<Int, Aluno>
+    val alunos: MutableMap<Int, Aluno> = mutableMapOf()
 
     override fun equals(other: Any?): Boolean { return other is Curso && codigoCurso == other.codigoCurso }
 

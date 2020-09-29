@@ -2,10 +2,10 @@ package br.application.desafio
 
 class DigitalHouseManager{
 
-     lateinit var listaAlunos: MutableMap<Int, Aluno>
-     lateinit var listaProfessores: MutableMap<Int, Professor>
-     lateinit var listaCursos: MutableMap<Int, Curso>
-     lateinit var listaMatriculas: MutableSet<Matricula>
+     val listaAlunos: MutableMap<Int, Aluno> = mutableMapOf()
+     val listaProfessores: MutableMap<Int, Professor> = mutableMapOf()
+     val listaCursos: MutableMap<Int, Curso> = mutableMapOf()
+     val listaMatriculas: MutableSet<Matricula> = mutableSetOf()
 
 
     fun registrarCurso(nome: String, codigoCurso: Int, quantidadeMaxAlunos: Int){
