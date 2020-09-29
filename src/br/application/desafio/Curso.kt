@@ -1,7 +1,9 @@
 package br.application.desafio
 
-class Curso(var nome: String, var codigoCurso: Int, var professorTitular: ProfessorTitular, var professorAdjunto: ProfessorAdjunto, var qdtMaxAlunos: Int) {
+class Curso(var nome: String, var codigoCurso: Int, var qdtMaxAlunos: Int) {
 
+    lateinit var professorTitular: ProfessorTitular
+    lateinit var professorAdjunto: ProfessorAdjunto
     lateinit var alunos: MutableMap<Int, Aluno>
 
     override fun equals(other: Any?): Boolean { return other is Curso && codigoCurso == other.codigoCurso }
