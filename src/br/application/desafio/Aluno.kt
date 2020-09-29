@@ -6,4 +6,6 @@ class Aluno(var nome: String, var sobrenome: String, var codigoAluno: Int) {
 
     override fun toString(): String { return "Nome: $nome || Sobrenome: $sobrenome || Código: $codigoAluno"   }
 
+    override fun hashCode(): Int { return codigoAluno }
+
 }
